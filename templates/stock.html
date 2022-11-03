@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CBA</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body >
+  <!-- sistema de grillas INICIO -->
+   <header class="table-header-group">
+    <nav class="bg-white border-gray-200 dark:bg-gray-900">
+      <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl px-4 md:px-6 py-2.5">
+          <a href="https://flowbite.com" class="flex items-center">
+              <img src="https://flowbite.com/docs/images/logo.svg" class="mr-3 h-6 sm:h-9" alt="Flowbite Logo" />
+              <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Canasta Basica Alimentaria en Paraguay</span>
+          </a>
+          <div>
+              <a href="#" class="ml-10 text-sm font-medium text-blue-600 dark:text-blue-500 hover:underline">Super Mercados</a>
+          </div>
+      </div>
+  </nav>
+  <nav class="bg-gray-50 dark:bg-gray-700">
+      <div class="py-3 px-4 mx-auto max-w-screen-xl md:px-6">
+          <div class="flex items-center">
+              <ul class="flex flex-row mt-0 mr-6 space-x-8 text-sm font-medium">
+                  <li>
+                      <a href="{{url_for('real')}}" class="text-gray-900 dark:text-white hover:underline">Real</a>
+                  </li>
+                  <li>
+                      <a href="{{url_for('grutter')}}" class="text-gray-900 dark:text-white hover:underline">Casa Grutter</a>
+                  </li>
+                  <li>
+                      <a href="{{url_for('stock')}}" class="text-gray-900 dark:text-white hover:underline">Stock</a>
+                  </li>
+                  <li>
+                    <a href="{{url_for('superseis')}}" class="text-gray-900 dark:text-white hover:underline">Super seis</a>
+                </li>
+              </ul>
+          </div>
+      </div>
+  </nav>
+  <div>
+    <h1 class="text-ellipsis overflow-hidden tracking-widest text-opacity-100">Super stock</h1>
+    <img src="./static/stock.jpg">
+    <p class="font-sans md:font-serif text-opacity-100	">Productos y precios de la Canasta basica alimentaria de Super Stock.</p>
+  </div>
+  </header>
+  <div class="grid grid-cols-4 gap-8">
+    {% for data in datos %}
+    <!-- card de cada personaje INICIO -->
+    <div class="max-w-sm rounded overflow-hidden shadow-lg border border-black mt-5 bg-white">
+        <img class="w-full" src="./static/{{data['image']}}" alt="Sunset in the mountains">
+        <div class="px-6 py-4">
+          <!-- Titulo -->
+          <div class="font-bold text-xl mb-2">Nombre: {{ data["name"] }}</div>
+          <!-- Titulo -->
+          <!-- caracteristicas -->
+          <p class="text-gray-700 text-base">
+            PRECIO: {{data["praise"] }}
+          </p>
+          <!-- caracteristicas -->
+        </div>
+      <div class="px-6 pt-4 pb-2">
+        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
+        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
+        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
+      </div>
+    </div>
+    <!-- card de cada personaje FIN -->
+    {% endfor %}
+  </div>
+  <!-- sistema de grillas FIN -->
+  <div class="grid grid-cols-4 gap-8">
+    <!-- card de cada personaje INICIO -->
+    <div class="max-w-sm rounded overflow-hidden shadow-lg border border-black mt-5 bg-white">
+        <img class="w-full" src="./static/stock.jpg" alt="Sunset in the mountains">
+        <div class="px-6 py-4">
+          <!-- Titulo -->
+          <div class="font-bold text-xl mb-2">Canasta basica alimentaria de Super Stock:</div>
+          <!-- Titulo -->
+          <!-- caracteristicas -->
+          <p class="text-gray-700 text-base">
+            PRECIO: ₲.303.300
+          </p>
+          <!-- caracteristicas -->
+        </div>
+      <div class="px-6 pt-4 pb-2">
+        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
+        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
+        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
+      </div>
+    </div>
+    <!-- card de cada personaje FIN -->
+  </div>
+</body>
+</html>
