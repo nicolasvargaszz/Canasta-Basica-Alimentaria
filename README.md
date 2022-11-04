@@ -15,4 +15,4 @@ Al final se puede apreciar el precio final de la Canasta alimentaria.
 Todas las tecnologias estan listadas en el archivo requirements.txt
 
 ## Contacto: 
-Twiter: https://twitter.com/ingenieronicolas
+Twiter: https://twitter.com/nicoelingeniero
