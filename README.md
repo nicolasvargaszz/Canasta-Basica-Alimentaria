@@ -2,9 +2,9 @@
 
 ---
 
-# Basic Food Basket Price Comparison
+# 🧺Basic Food Basket Price Comparison
 
-**Project Link with Notes**: [Notion Project Notes](https://www.notion.so/Canasta-basica-precios-promedios-en-py-617ca121378d44b7b7b9deb15ffddeec)
+**Project Link with Notes**: [Notion Project Notes](https://www.notion.so/Canasta-basica-precios-promedios-en-py-617ca121378d44b7b7b9deb15ffddeec) 📚 
 
 ## Objective
 
